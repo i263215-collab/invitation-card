@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qawali Night 2026</title>
+    
+    <style>
+        /* Base & Global Styles */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8f0e5;
+            color: #25133f;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #24113d;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h2 {
+            color: #f3c45e;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f3c45e;
+        }
+
+        /* Hero / Home Section */
+        .hero {
+            background-color: #302052;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .small-heading {
+            letter-spacing: 4px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            color: #f3c45e;
+            font-size: 55px;
+            margin: 15px 0;
+        }
+
+        .hero h3 {
+            font-size: 23px;
+        }
+
+        .hero img {
+            width: 350px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 4px solid #f3c45e;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+        /* Details Section */
+        .details {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .details h2, .schedule h2, .gallery-section h1, .contact-section h1 {
+            color: #6b3b91;
+            font-size: 32px;
+        }
+
+        .detail-box {
+            background-color: white;
+            width: 60%;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Schedule Section */
+        .schedule {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f3e9f8;
+        }
+
+        table {
+            width: 75%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #6b3b91;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #6b3b91;
+            padding: 15px;
+        }
+
+        tr:hover {
+            background-color: #eee3f5;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .gallery-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #f3c45e;
+            box-shadow: 0 4px 12px rgba(36, 17, 61, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-card h3 {
+            color: #6b3b91;
+            padding: 15px 10px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f3e9f8;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 30px auto 0;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            background-color: #302052;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 280px;
+            text-align: left;
+        }
+
+        .contact-info h2 {
+            color: #f3c45e;
+            margin-bottom: 20px;
+        }
+
+        .rsvp-form {
+            background-color: white;
+            padding: 30px;
+            border: 3px solid #f3c45e;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 280px;
+            text-align: left;
+        }
+
+        .rsvp-form h2 {
+            color: #6b3b91;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .rsvp-form label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #24113d;
+        }
+
+        .rsvp-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #6b3b91;
+            border-radius: 7px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #6b3b91;
+            color: white;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 25px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #24113d;
+        }
+
+        footer {
+            background-color: #24113d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <h2>Qawali Night 2026</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <p class="small-heading">YOU ARE INVITED TO</p>
+        <h1>Qawali Night</h1>
+        <h3>Feel the Soul, Hear the Faith</h3>
+        <img src="images/ab.jpg" alt="Qawali Performance">
+        <p>Join us for an unforgettable evening of Qawali, spirituality and peace.</p>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="details">
+        <h2>Event Information</h2>
+        <div class="detail-box">
+            <p><b>Date:</b> 15 November 2026</p>
+            <p><b>Time:</b> 7:00 PM - 10:00 PM</p>
+            <p><b>Venue:</b> FAST Auditorium</p>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <h2>Event Schedule</h2>
+        <p>Enjoy an unforgettable evening of Qawali, spirituality, music and beautiful performances.</p>
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>7:00 PM</td>
+                <td>Opening Performance</td>
+            </tr>
+            <tr>
+                <td>7:45 PM</td>
+                <td>Qawali Session</td>
+            </tr>
+            <tr>
+                <td>8:45 PM</td>
+                <td>Special Guest</td>
+            </tr>
+            <tr>
+                <td>9:30 PM</td>
+                <td>Final Qawali</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h1>Our Gallery</h1>
+        <p>Explore the beautiful moments of Qawali, music, culture and spirituality.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh7vta5gwtHhp7J95KXhb-6Ii-mCbKRcCQf1MfHYAYvcIfXpNsVmaLqg2n&s=10" alt="Qawali singers performing">
+                <h3>Live Qawali Performance</h3>
+            </div>
+            <div class="gallery-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYCeJ5jtjUK8JfsMUNu6DBe-TAFpe7GDZnb95DOHbute1ZB7prySu_z7Lo&s=10" alt="Traditional Qawali musicians">
+                <h3>Traditional Music</h3>
+            </div>
+            <div class="gallery-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThMusQhjutXYzmxUEqsoCm0nqe7CdnGwrQMk6PfLwqtZgGAlgJUOe0K0nE&s=10" alt="Harmonium and tabla performance">
+                <h3>Harmonium and Tabla</h3>
+            </div>
+            <div class="gallery-card">
+                <img src="https://media.easy-peasy.ai/7ecb5438-06e0-443f-b74a-74763aac6add/f90aca34-a22e-42ea-bb4c-080719dbdd36.png" alt="Qawali singers performing together">
+                <h3>Soulful Singing</h3>
+            </div>
+            <div class="gallery-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqQDkdmV3RbaSLtqLq72DZMJFJL5WYT4oAcCXAW6LF8A&s=10" alt="Audience enjoying Qawali event">
+                <h3>Beautiful Event Moments</h3>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.openai.com/static-rsc-4/jNiThRX9Db7mG0j4AfTxLpl6uMA6Q0Tw8oVN6EwUBZusAzQpeThs0Vs9OggfHTBIACL5xp2_viaGEj3kxKUBpTZUvmlDwfmxYc5OH_KQyGBIO3a6iXABSiRgzCfeirdfO1pEU1b9wBBXNkOnfpKwGip-q2XPmxjoFpVsINVy0D0te8l906BKjlUW_KItQg1H?purpose=fullsize" alt="Qawali musicians performing live">
+                <h3>Musical Celebration</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & RSVP Section -->
+    <section id="contact" class="contact-section">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you! Join us for an unforgettable Qawali evening.</p>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Event Information</h2>
+                <p><b>Event:</b> Qawali Night 2026</p>
+                <p><b>Date:</b> 15 November 2026</p>
+                <p><b>Time:</b> 7:00 PM - 10:00 PM</p>
+                <p><b>Venue:</b> FAST Auditorium</p>
+                <p><b>Message:</b> Feel the Soul, Hear the Faith.</p>
+            </div>
+
+            <div class="rsvp-form">
+                <h2>RSVP Registration</h2>
+                <form onsubmit="confirmRSVP(event)">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" min="1" max="10" placeholder="Enter number of guests" required>
+
+                    <button type="submit" style="width: 100%;">RSVP Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Qawali Night 2026 | Together in Faith, United in Music</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function confirmRSVP(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let guests = document.getElementById("guests").value;
+
+            alert("Thank you, " + name + "! Your RSVP for " + guests + " guest(s) has been received. We look forward to seeing you at Qawali Night 2026!");
+        }
+    </script>
+
+</body>
+</html>
