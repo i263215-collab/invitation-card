@@ -1,0 +1,143 @@
+
+body {
+    background-color: #f8f0e5;
+    color: #25133f;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #24113d;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    color: #f3c45e;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #f3c45e;
+}
+
+.hero {
+    background-color: #302052;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.small-heading {
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    color: #f3c45e;
+    font-size: 55px;
+    margin: 15px;
+}
+
+.hero h3 {
+    font-size: 23px;
+}
+
+.hero img {
+    width: 350px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #f3c45e;
+    margin: 20px auto;
+    display: block;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+.details {
+    text-align: center;
+    padding: 30px;
+}
+
+.details h2,
+.schedule h2 {
+    color: #6b3b91;
+    font-size: 28px;
+}
+
+.detail-box {
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.schedule {
+    text-align: center;
+    padding: 25px;
+}
+
+table {
+    width: 75%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #6b3b91;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #6b3b91;
+    padding: 15px;
+}
+
+tr:hover {
+    background-color: #eee3f5;
+}
+
+.invitation {
+    text-align: center;
+    padding: 35px;
+}
+
+.invitation h2 {
+    color: #6b3b91;
+}
+
+button {
+    background-color: #6b3b91;
+    color: white;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 25px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #24113d;
+}
+
+footer {
+    background-color: #24113d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
