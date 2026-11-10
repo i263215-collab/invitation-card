@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery - Qawali Night 2026</title>
+
+    <!-- Existing CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Gallery Page Styling -->
+    <style>
+
+        .gallery-section {
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .gallery-section h1 {
+            color: #6b3b91;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-section .intro {
+            font-size: 17px;
+            margin-bottom: 35px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .gallery-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #f3c45e;
+            box-shadow: 0 4px 12px rgba(36, 17, 61, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-card h3 {
+            color: #6b3b91;
+            padding: 15px 10px;
+            margin: 0;
+            font-size: 19px;
+        }
+
+        .gallery-footer-text {
+            background-color: #302052;
+            color: white;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 12px;
+        }
+
+        .gallery-footer-text h2 {
+            color: #f3c45e;
+        }
+
+        /* Tablet Screen */
+        @media (max-width: 768px) {
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 6px;
+            }
+
+        }
+
+        /* Mobile Screen */
+        @media (max-width: 480px) {
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-section h1 {
+                font-size: 28px;
+            }
+
+            .gallery-section {
+                padding: 25px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+
+        <h2>Qawali Night 2026</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+
+        <h1>Our Gallery</h1>
+
+        <p class="intro">
+            Explore the beautiful moments of Qawali,
+            music, culture and spirituality.
+        </p>
+
+
+        <!-- Gallery Images -->
+        <div class="gallery-grid">
+
+            <!-- Image 1 -->
+            <div class="gallery-card">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh7vta5gwtHhp7J95KXhb-6Ii-mCbKRcCQf1MfHYAYvcIfXpNsVmaLqg2n&s=10"
+                     alt="Qawali singers performing on stage">
+
+                <h3>Live Qawali Performance</h3>
+
+            </div>
+
+
+            <!-- Image 2 -->
+            <div class="gallery-card">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYCeJ5jtjUK8JfsMUNu6DBe-TAFpe7GDZnb95DOHbute1ZB7prySu_z7Lo&s=10"
+                     alt="Traditional Qawali musicians">
+
+                <h3>Traditional Music</h3>
+
+            </div>
+
+
+            <!-- Image 3 -->
+            <div class="gallery-card">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThMusQhjutXYzmxUEqsoCm0nqe7CdnGwrQMk6PfLwqtZgGAlgJUOe0K0nE&s=10"
+                     alt="Harmonium and tabla performance">
+
+                <h3>Harmonium and Tabla</h3>
+
+            </div>
+
+
+            <!-- Image 4 -->
+            <div class="gallery-card">
+
+                <img src="https://media.easy-peasy.ai/7ecb5438-06e0-443f-b74a-74763aac6add/f90aca34-a22e-42ea-bb4c-080719dbdd36.png"
+                     alt="Qawali singers performing together">
+
+                <h3>Soulful Singing</h3>
+
+            </div>
+
+
+            <!-- Image 5 -->
+            <div class="gallery-card">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqQDkdmV3RbaSLtqLq72DZMJFJL5WYT4oAcCXAW6LF8A&s=10"
+                     alt="Audience enjoying a Qawali event">
+
+                <h3>Beautiful Event Moments</h3>
+
+            </div>
+
+
+            <!-- Image 6 -->
+            <div class="gallery-card">
+
+                <img src="https://images.openai.com/static-rsc-4/jNiThRX9Db7mG0j4AfTxLpl6uMA6Q0Tw8oVN6EwUBZusAzQpeThs0Vs9OggfHTBIACL5xp2_viaGEj3kxKUBpTZUvmlDwfmxYc5OH_KQyGBIO3a6iXABSiRgzCfeirdfO1pEU1b9wBBXNkOnfpKwGip-q2XPmxjoFpVsINVy0D0te8l906BKjlUW_KItQg1H?purpose=fullsize"
+                     alt="Qawali musicians performing live">
+
+                <h3>Musical Celebration</h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- Gallery Closing Section -->
+        <div class="gallery-footer-text">
+
+            <h2>Feel the Soul, Hear the Faith</h2>
+
+            <p>
+                Experience an unforgettable evening
+                filled with music, peace and spirituality.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Qawali Night 2026 |
+            Together in Faith, United in Music
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
